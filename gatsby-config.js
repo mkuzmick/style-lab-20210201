@@ -22,7 +22,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-theme-ui`,
+    // `gatsby-plugin-theme-ui`,
     `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,

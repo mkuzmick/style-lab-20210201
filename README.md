@@ -43,3 +43,4 @@ npm i theme-ui gatsby-plugin-theme-ui @theme-ui/presets
 `gatsby-plugin-theme-ui`,
 ```
 * create the shadow theme folder (and, optionally start with a base theme and merge on top of it)
+* 
