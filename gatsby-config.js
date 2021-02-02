@@ -9,12 +9,39 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `mdx`,
+        path: `${__dirname}/content/mdx/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/content/images/`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-theme-ui`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        // defaultLayouts: {
+        //   posts: require.resolve("./src/components/posts-layout.js"),
+        //   default: require.resolve("./src/components/default-page-layout.js"),
+        // },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
